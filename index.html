@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Para ti</title>
+<meta name="description" content="Una carta para ti">
+<meta name="theme-color" content="#2f160b">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💌</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Great+Vibes&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<canvas id="bg" aria-hidden="true"></canvas>
+<div class="velo" id="velo" aria-hidden="true"></div>
+
+<main class="stage">
+  <div class="envelope-wrap" id="envWrap">
+    <button class="envelope" id="envelope" aria-label="Abrir el sobre">
+      <div class="env-back"></div>
+      <div class="mini-carta"></div>
+      <div class="pieza izq"></div>
+      <div class="pieza der"></div>
+      <div class="pieza abajo"></div>
+      <div class="flap"></div>
+      <div class="direccion" id="direccion">Para ti</div>
+      <svg class="sello" viewBox="0 0 64 64" aria-hidden="true">
+        <circle cx="32" cy="32" r="29" fill="#8f2a1c"/>
+        <circle cx="32" cy="32" r="29" fill="none" stroke="#cf5a35" stroke-width="2" stroke-dasharray="3 3"/>
+        <path d="M32 46 C14 33 20 18 29 21 C31 22 32 24 32 25 C32 24 33 22 35 21 C44 18 50 33 32 46Z" fill="#f5c98f"/>
+      </svg>
+    </button>
+    <p class="pista" id="pista">Toca el sobre</p>
+  </div>
+
+  <div class="carta-wrap" id="cartaWrap">
+  <article class="carta" id="carta" aria-live="polite">
+    <h1 id="titulo"></h1>
+    <div class="texto" id="texto"></div>
+    <p class="firma" id="firma"></p>
+    <div class="pie" id="pie">
+      <span class="dias" id="dias"></span>
+      <button class="btn" id="releer">Volver a leer</button>
+    </div>
+  </article>
+  </div>
+</main>
+
+<button class="musica" id="btnMusica" aria-label="Silenciar la música" aria-pressed="false">♫</button>
+
+<script src="js/config.js" defer></script>
+<script src="js/background.js" defer></script>
+<script src="js/music.js" defer></script>
+<script src="js/letter.js" defer></script>
+</body>
+</html>
